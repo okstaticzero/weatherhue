@@ -1,0 +1,115 @@
+.main-display{
+  display: inline-block;
+  flex-grow: 1;
+  margin-bottom: 60px;
+}
+@media screen and (min-width:800px){
+  .main-display{
+    flex-grow: 1;
+  }
+}
+.display-container{
+  display: flex;
+  justify-content:center;
+  text-align: center;
+  width:100%;
+}
+.details{
+  color:#FFF;
+}
+
+
+.details h1{
+   font-size:70px;
+   margin-bottom: 0px;
+   margin-top: 0;
+   font-weight:700;
+}
+.details h2{
+  font-size:45px;
+  margin-top: 0;
+  margin-bottom: 5px;
+   font-weight:normal;
+}
+.details h3{
+  font-size:20px;
+   font-weight:normal;
+  padding-bottom: 0px;
+}
+.details h5{
+  font-size:16px;
+  margin:0;
+   font-weight:normal;
+}
+.weather-deets{
+  width: 100%;
+  margin-top: 1em;
+} 
+.details .title-type{
+  font-size: 26px;
+  display:block;
+  margin-bottom: 5px;
+  padding-bottom: 0px;
+}
+@media screen and (min-width:800px){
+  .details h1{
+   font-size:70px;
+   margin-top: 20px;
+   margin-bottom: 30px;
+  }
+  .details h2{
+    margin: 0px;
+    line-height: 0;
+    margin-bottom: 50px;
+    font-size:40px
+  }
+  .details h3{
+    font-size:28px;
+    padding-bottom: 0px;
+  }
+  .details h5{
+    font-size:20px
+  }
+  .weather-deets{
+    width: 100%;
+    margin-top: 3em;
+  }
+  .details .title-type{
+    font-size: 26px;
+    display:block;
+    padding-bottom: 10px;
+  }
+}
+
+.sliderOuter{
+  width: 70%;
+}
+
+.hr{
+  display: inline-block;
+  width:40%;
+  border-bottom: 1px solid rgba(255,255,255,.5);
+}
+
+.rc-slider-handle{
+  width:26px;
+  height:26px;
+  margin-left: -12px;
+  margin-top: -11px;
+}
+
+.loader{
+  margin-top: 10%;
+  width:200px;
+}
+.welcome{
+  color:#FFF;
+}
+.welcome h2{
+  font-size: 36px;
+   font-weight: normal;
+}
+.welcome h4{
+  font-size: 18px;
+   font-weight: normal;
+}

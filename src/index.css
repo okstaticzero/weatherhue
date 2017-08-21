@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #CCC;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container-fluid{
+  display:flex;
+  flex-direction:column;
+  padding:0;
+  background-color: #FFF;
+  height: auto;
+  background-color: #ccc;
+  transition:background-color 350ms;
+}
+
+@media screen and (min-width:800px){
+  .container-fluid{
+    flex-direction:row;
+    height:100vh;
+  }
+}
+
+.footer{
+  position: fixed;
+  width:100%;
+  bottom: 0;
+  left:0;
+  height: 30px;
+  background-color: #DDD;
+}
+.footer a{
+  display: block;
+  margin-top: 5px;
+  font-size: 13px;
+  padding-left: 20px;
+  text-decoration: none;
+}

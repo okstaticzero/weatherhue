@@ -1,0 +1,86 @@
+
+.ui-container{
+  display: inline-block;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #CCC;
+  text-align: left;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: rgba(255,255,255,.3);
+  width:100%;
+  color:#FFF;
+}
+@media screen and (min-width:800px){
+  .ui-container{
+    width:350px;
+  }
+}
+
+.logo{
+  margin: 40px 0px 30px 0px;
+}
+.form-control{
+  width:222px;
+  height:31px;
+  border: 1px solid #CCC;
+  outline:none;
+  font-size:14px;
+  padding-left: 10px;
+  margin-right: 6px;
+}
+.btn.btn-default{
+  background-color: #555;
+  color:#FFF;
+  border:0;
+  font-size: 14px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+.current-form{
+  padding-bottom: 20px;
+  border-bottom: 1px solid #FFF;
+}
+.range-title{
+  margin-top: 30px;
+  font-size:19px;
+  margin-bottom: 0;
+}
+.date-pickers{
+  text-align: left;
+  
+}
+.date-wrapper{
+  width:100%;
+  margin-bottom: 5px;
+}
+.date-wrapper h5{
+  width:85px;
+}
+.date-wrapper h5, .rw-datetimepicker{
+  display:inline-block;
+  width: 100%
+}
+.select-field{
+   width:295px;
+}
+.Select-control{
+  border-radius:0;
+}
+.select-label{
+  margin-bottom: 4px;
+  font-size:13px;
+}
+.DateInput{
+  padding: 2px
+}
+.DateRangePicker__picker{
+  top:50px;
+}
+
+.DateInput--with-caret::after, .DateInput--with-caret::before{
+  top:40px;
+}
+.Select-clear{
+  display: none;
+}
+
