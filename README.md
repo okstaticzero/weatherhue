@@ -15,7 +15,7 @@ React app using the DarkSky api to display weather data
 - converts temerature to a color along the spectrum
 - uses airbnb's react-dates component for date picker
 - error handling with messages
-- tests example using Jest, seeing in file: App.test.js
+- tests example using Jest and Enzyme
 
 ## commands:
 

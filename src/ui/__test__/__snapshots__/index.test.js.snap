@@ -1,0 +1,1149 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should rener the CurrentWeather component 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <div
+    className="current-form"
+>
+    <h4
+        className="current-title"
+    >
+        View current weather
+    </h4>
+    <form
+        className="form-inline"
+        onSubmit={[Function]}
+    >
+        <div
+            className="form-group"
+        >
+            <input
+                className="form-control"
+                onChange={[Function]}
+                placeholder="Enter Address or zip"
+                type="text"
+                value=""
+            />
+            <button
+                className="btn btn-default"
+            >
+                GO
+            </button>
+        </div>
+    </form>
+</div>,
+  "nodes": Array [
+    <div
+      className="current-form"
+>
+      <h4
+            className="current-title"
+      >
+            View current weather
+      </h4>
+      <form
+            className="form-inline"
+            onSubmit={[Function]}
+      >
+            <div
+                  className="form-group"
+            >
+                  <input
+                        className="form-control"
+                        onChange={[Function]}
+                        placeholder="Enter Address or zip"
+                        type="text"
+                        value=""
+                  />
+                  <button
+                        className="btn btn-default"
+                  >
+                        GO
+                  </button>
+            </div>
+      </form>
+</div>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 0,
+      "_context": Object {},
+      "_currentElement": <CurrentWeather />,
+      "_debugID": 3,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": CurrentWeather {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "handleChange": [Function],
+        "onSubmit": [Function],
+        "props": Object {},
+        "refs": Object {},
+        "state": Object {
+          "input": "",
+        },
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 2,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <div
+          className="current-form"
+>
+          <h4
+                    className="current-title"
+          >
+                    View current weather
+          </h4>
+          <form
+                    className="form-inline"
+                    onSubmit={[Function]}
+          >
+                    <div
+                              className="form-group"
+                    >
+                              <input
+                                        className="form-control"
+                                        onChange={[Function]}
+                                        placeholder="Enter Address or zip"
+                                        type="text"
+                                        value=""
+                              />
+                              <button
+                                        className="btn btn-default"
+                              >
+                                        GO
+                              </button>
+                    </div>
+          </form>
+</div>,
+        "_debugID": 4,
+        "_renderedOutput": <div
+          className="current-form"
+>
+          <h4
+                    className="current-title"
+          >
+                    View current weather
+          </h4>
+          <form
+                    className="form-inline"
+                    onSubmit={[Function]}
+          >
+                    <div
+                              className="form-group"
+                    >
+                              <input
+                                        className="form-control"
+                                        onChange={[Function]}
+                                        placeholder="Enter Address or zip"
+                                        type="text"
+                                        value=""
+                              />
+                              <button
+                                        className="btn btn-default"
+                              >
+                                        GO
+                              </button>
+                    </div>
+          </form>
+</div>,
+      },
+      "_renderedNodeType": 0,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <CurrentWeather />,
+}
+`;
+
+exports[`should rener the PastWeather component 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <div
+    className="past-form"
+>
+    <div
+        className="date-pickers"
+    >
+        <div
+            className="date-wrapper"
+        >
+            <form
+                onSubmit={[Function]}
+            >
+                <h4
+                    className="range-title"
+                >
+                    View weather by range / interval
+                </h4>
+                <h5
+                    className="select-label"
+                >
+                    Date range:
+                </h5>
+                <DateRangePicker
+                    anchorDirection="left"
+                    customArrowIcon={null}
+                    customCloseIcon={null}
+                    customInputIcon={null}
+                    daySize={39}
+                    disabled={false}
+                    displayFormat={[Function]}
+                    enableOutsideDays={false}
+                    endDate={"2017-08-22T16:42:44.006Z"}
+                    endDateId="endDate"
+                    endDatePlaceholderText="End Date"
+                    firstDayOfWeek={null}
+                    focusedInput={null}
+                    hideKeyboardShortcutsPanel={false}
+                    horizontalMargin={0}
+                    initialVisibleMonth={null}
+                    isDayBlocked={[Function]}
+                    isDayHighlighted={[Function]}
+                    isOutsideRange={[Function]}
+                    isRTL={false}
+                    keepOpenOnDateSelect={false}
+                    minimumNights={1}
+                    monthFormat="MMMM YYYY"
+                    navNext={null}
+                    navPrev={null}
+                    numberOfMonths={1}
+                    onClose={[Function]}
+                    onDatesChange={[Function]}
+                    onFocusChange={[Function]}
+                    onNextMonthClick={[Function]}
+                    onPrevMonthClick={[Function]}
+                    orientation="horizontal"
+                    phrases={
+                        Object {
+                            "chooseAvailableEndDate": [Function],
+                            "chooseAvailableStartDate": [Function],
+                            "clearDates": "Clear Dates",
+                            "closeDatePicker": "Close",
+                            "dateIsUnavailable": [Function],
+                            "enterKey": "Enter key",
+                            "escape": "Escape key",
+                            "focusStartDate": "Interact with the calendar and add the check-in date for your trip.",
+                            "hideKeyboardShortcutsPanel": "Close the shortcuts panel",
+                            "homeEnd": "Home and end keys",
+                            "jumpToNextMonth": "Move forward to switch to the next month",
+                            "jumpToPrevMonth": "Move backward to switch to the previous month",
+                            "keyboardNavigationInstructions": "Press the down arrow key to interact with the calendar and
+                          select a date. Press the question mark key to get the keyboard shortcuts for changing dates.",
+                            "keyboardShortcuts": "Keyboard Shortcuts",
+                            "leftArrowRightArrow": "Right and left arrow keys",
+                            "moveFocusByOneDay": "Move backward (left) and forward (right) by one day",
+                            "moveFocusByOneMonth": "Switch months",
+                            "moveFocusByOneWeek": "Move backward (up) and forward (down) by one week",
+                            "moveFocustoStartAndEndOfWeek": "Go to the first or last day of a week",
+                            "openThisPanel": "Open this panel",
+                            "pageUpPageDown": "page up and page down keys",
+                            "questionMark": "Question mark",
+                            "returnFocusToInput": "Return to the date input field",
+                            "selectFocusedDate": "Select the date in focus",
+                            "showKeyboardShortcutsPanel": "Open the keyboard shortcuts panel",
+                            "upArrowDownArrow": "up and down arrow keys",
+                          }
+                    }
+                    readOnly={false}
+                    renderCalendarInfo={null}
+                    renderDay={null}
+                    renderMonth={null}
+                    reopenPickerOnClearDates={false}
+                    required={false}
+                    screenReaderInputMessage=""
+                    showClearDates={false}
+                    showDefaultInputIcon={false}
+                    startDate={"2017-08-21T16:42:44.004Z"}
+                    startDateId="startDate"
+                    startDatePlaceholderText="Start Date"
+                    withFullScreenPortal={false}
+                    withPortal={false}
+                />
+                <br />
+                <h5
+                    className="select-label"
+                >
+                    Interval:
+                </h5>
+                <Select
+                    addLabelText="Add \\"{label}\\"?"
+                    arrowRenderer={[Function]}
+                    autosize={true}
+                    backspaceRemoves={true}
+                    backspaceToRemoveMessage="Press backspace to remove {label}"
+                    className="select-field"
+                    clearAllText="Clear all"
+                    clearRenderer={[Function]}
+                    clearValueText="Clear value"
+                    clearable={true}
+                    deleteRemoves={true}
+                    delimiter=","
+                    disabled={false}
+                    escapeClearsValue={true}
+                    filterOptions={[Function]}
+                    ignoreAccents={true}
+                    ignoreCase={true}
+                    inputProps={Object {}}
+                    isLoading={false}
+                    joinValues={false}
+                    labelKey="label"
+                    matchPos="any"
+                    matchProp="any"
+                    menuBuffer={0}
+                    menuRenderer={[Function]}
+                    multi={false}
+                    name="form-field-name"
+                    noResultsText="No results found"
+                    onBlurResetsInput={true}
+                    onChange={[Function]}
+                    onCloseResetsInput={true}
+                    optionComponent={[Function]}
+                    options={
+                        Array [
+                            Object {
+                              "label": "Every Hour",
+                              "value": "3600",
+                            },
+                            Object {
+                              "label": "Every 2 Hour",
+                              "value": "7200",
+                            },
+                            Object {
+                              "label": "Every 6 Hour",
+                              "value": "21600",
+                            },
+                            Object {
+                              "label": "Every 12 Hour",
+                              "value": "43200",
+                            },
+                            Object {
+                              "label": "Every 24 Hour",
+                              "value": "86400",
+                            },
+                            Object {
+                              "label": "Every 7 days",
+                              "value": "604800",
+                            },
+                            Object {
+                              "label": "Every 30 days",
+                              "value": "2592000",
+                            },
+                          ]
+                    }
+                    pageSize={5}
+                    placeholder="Select..."
+                    required={false}
+                    scrollMenuIntoView={true}
+                    searchable={true}
+                    simpleValue={false}
+                    tabSelectsValue={true}
+                    value="21600"
+                    valueComponent={[Function]}
+                    valueKey="value"
+                />
+                <br />
+                <button
+                    className="btn btn-default"
+                >
+                    VIEW RESULTS
+                </button>
+            </form>
+        </div>
+    </div>
+</div>,
+  "nodes": Array [
+    <div
+      className="past-form"
+>
+      <div
+            className="date-pickers"
+      >
+            <div
+                  className="date-wrapper"
+            >
+                  <form
+                        onSubmit={[Function]}
+                  >
+                        <h4
+                              className="range-title"
+                        >
+                              View weather by range / interval
+                        </h4>
+                        <h5
+                              className="select-label"
+                        >
+                              Date range:
+                        </h5>
+                        <DateRangePicker
+                              anchorDirection="left"
+                              customArrowIcon={null}
+                              customCloseIcon={null}
+                              customInputIcon={null}
+                              daySize={39}
+                              disabled={false}
+                              displayFormat={[Function]}
+                              enableOutsideDays={false}
+                              endDate={"2017-08-22T16:42:44.006Z"}
+                              endDateId="endDate"
+                              endDatePlaceholderText="End Date"
+                              firstDayOfWeek={null}
+                              focusedInput={null}
+                              hideKeyboardShortcutsPanel={false}
+                              horizontalMargin={0}
+                              initialVisibleMonth={null}
+                              isDayBlocked={[Function]}
+                              isDayHighlighted={[Function]}
+                              isOutsideRange={[Function]}
+                              isRTL={false}
+                              keepOpenOnDateSelect={false}
+                              minimumNights={1}
+                              monthFormat="MMMM YYYY"
+                              navNext={null}
+                              navPrev={null}
+                              numberOfMonths={1}
+                              onClose={[Function]}
+                              onDatesChange={[Function]}
+                              onFocusChange={[Function]}
+                              onNextMonthClick={[Function]}
+                              onPrevMonthClick={[Function]}
+                              orientation="horizontal"
+                              phrases={
+                                    Object {
+                                          "chooseAvailableEndDate": [Function],
+                                          "chooseAvailableStartDate": [Function],
+                                          "clearDates": "Clear Dates",
+                                          "closeDatePicker": "Close",
+                                          "dateIsUnavailable": [Function],
+                                          "enterKey": "Enter key",
+                                          "escape": "Escape key",
+                                          "focusStartDate": "Interact with the calendar and add the check-in date for your trip.",
+                                          "hideKeyboardShortcutsPanel": "Close the shortcuts panel",
+                                          "homeEnd": "Home and end keys",
+                                          "jumpToNextMonth": "Move forward to switch to the next month",
+                                          "jumpToPrevMonth": "Move backward to switch to the previous month",
+                                          "keyboardNavigationInstructions": "Press the down arrow key to interact with the calendar and
+                                      select a date. Press the question mark key to get the keyboard shortcuts for changing dates.",
+                                          "keyboardShortcuts": "Keyboard Shortcuts",
+                                          "leftArrowRightArrow": "Right and left arrow keys",
+                                          "moveFocusByOneDay": "Move backward (left) and forward (right) by one day",
+                                          "moveFocusByOneMonth": "Switch months",
+                                          "moveFocusByOneWeek": "Move backward (up) and forward (down) by one week",
+                                          "moveFocustoStartAndEndOfWeek": "Go to the first or last day of a week",
+                                          "openThisPanel": "Open this panel",
+                                          "pageUpPageDown": "page up and page down keys",
+                                          "questionMark": "Question mark",
+                                          "returnFocusToInput": "Return to the date input field",
+                                          "selectFocusedDate": "Select the date in focus",
+                                          "showKeyboardShortcutsPanel": "Open the keyboard shortcuts panel",
+                                          "upArrowDownArrow": "up and down arrow keys",
+                                        }
+                              }
+                              readOnly={false}
+                              renderCalendarInfo={null}
+                              renderDay={null}
+                              renderMonth={null}
+                              reopenPickerOnClearDates={false}
+                              required={false}
+                              screenReaderInputMessage=""
+                              showClearDates={false}
+                              showDefaultInputIcon={false}
+                              startDate={"2017-08-21T16:42:44.004Z"}
+                              startDateId="startDate"
+                              startDatePlaceholderText="Start Date"
+                              withFullScreenPortal={false}
+                              withPortal={false}
+                        />
+                        <br />
+                        <h5
+                              className="select-label"
+                        >
+                              Interval:
+                        </h5>
+                        <Select
+                              addLabelText="Add \\"{label}\\"?"
+                              arrowRenderer={[Function]}
+                              autosize={true}
+                              backspaceRemoves={true}
+                              backspaceToRemoveMessage="Press backspace to remove {label}"
+                              className="select-field"
+                              clearAllText="Clear all"
+                              clearRenderer={[Function]}
+                              clearValueText="Clear value"
+                              clearable={true}
+                              deleteRemoves={true}
+                              delimiter=","
+                              disabled={false}
+                              escapeClearsValue={true}
+                              filterOptions={[Function]}
+                              ignoreAccents={true}
+                              ignoreCase={true}
+                              inputProps={Object {}}
+                              isLoading={false}
+                              joinValues={false}
+                              labelKey="label"
+                              matchPos="any"
+                              matchProp="any"
+                              menuBuffer={0}
+                              menuRenderer={[Function]}
+                              multi={false}
+                              name="form-field-name"
+                              noResultsText="No results found"
+                              onBlurResetsInput={true}
+                              onChange={[Function]}
+                              onCloseResetsInput={true}
+                              optionComponent={[Function]}
+                              options={
+                                    Array [
+                                          Object {
+                                            "label": "Every Hour",
+                                            "value": "3600",
+                                          },
+                                          Object {
+                                            "label": "Every 2 Hour",
+                                            "value": "7200",
+                                          },
+                                          Object {
+                                            "label": "Every 6 Hour",
+                                            "value": "21600",
+                                          },
+                                          Object {
+                                            "label": "Every 12 Hour",
+                                            "value": "43200",
+                                          },
+                                          Object {
+                                            "label": "Every 24 Hour",
+                                            "value": "86400",
+                                          },
+                                          Object {
+                                            "label": "Every 7 days",
+                                            "value": "604800",
+                                          },
+                                          Object {
+                                            "label": "Every 30 days",
+                                            "value": "2592000",
+                                          },
+                                        ]
+                              }
+                              pageSize={5}
+                              placeholder="Select..."
+                              required={false}
+                              scrollMenuIntoView={true}
+                              searchable={true}
+                              simpleValue={false}
+                              tabSelectsValue={true}
+                              value="21600"
+                              valueComponent={[Function]}
+                              valueKey="value"
+                        />
+                        <br />
+                        <button
+                              className="btn btn-default"
+                        >
+                              VIEW RESULTS
+                        </button>
+                  </form>
+            </div>
+      </div>
+</div>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 0,
+      "_context": Object {},
+      "_currentElement": <PastWeather />,
+      "_debugID": 5,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": PastWeather {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "onSumbmit": [Function],
+        "props": Object {},
+        "refs": Object {},
+        "selectChange": [Function],
+        "state": Object {
+          "endDate": "2017-08-22T16:42:44.006Z",
+          "interval": "21600",
+          "startDate": "2017-08-21T16:42:44.004Z",
+        },
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 3,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <div
+          className="past-form"
+>
+          <div
+                    className="date-pickers"
+          >
+                    <div
+                              className="date-wrapper"
+                    >
+                              <form
+                                        onSubmit={[Function]}
+                              >
+                                        <h4
+                                                  className="range-title"
+                                        >
+                                                  View weather by range / interval
+                                        </h4>
+                                        <h5
+                                                  className="select-label"
+                                        >
+                                                  Date range:
+                                        </h5>
+                                        <DateRangePicker
+                                                  anchorDirection="left"
+                                                  customArrowIcon={null}
+                                                  customCloseIcon={null}
+                                                  customInputIcon={null}
+                                                  daySize={39}
+                                                  disabled={false}
+                                                  displayFormat={[Function]}
+                                                  enableOutsideDays={false}
+                                                  endDate={"2017-08-22T16:42:44.006Z"}
+                                                  endDateId="endDate"
+                                                  endDatePlaceholderText="End Date"
+                                                  firstDayOfWeek={null}
+                                                  focusedInput={null}
+                                                  hideKeyboardShortcutsPanel={false}
+                                                  horizontalMargin={0}
+                                                  initialVisibleMonth={null}
+                                                  isDayBlocked={[Function]}
+                                                  isDayHighlighted={[Function]}
+                                                  isOutsideRange={[Function]}
+                                                  isRTL={false}
+                                                  keepOpenOnDateSelect={false}
+                                                  minimumNights={1}
+                                                  monthFormat="MMMM YYYY"
+                                                  navNext={null}
+                                                  navPrev={null}
+                                                  numberOfMonths={1}
+                                                  onClose={[Function]}
+                                                  onDatesChange={[Function]}
+                                                  onFocusChange={[Function]}
+                                                  onNextMonthClick={[Function]}
+                                                  onPrevMonthClick={[Function]}
+                                                  orientation="horizontal"
+                                                  phrases={
+                                                            Object {
+                                                                      "chooseAvailableEndDate": [Function],
+                                                                      "chooseAvailableStartDate": [Function],
+                                                                      "clearDates": "Clear Dates",
+                                                                      "closeDatePicker": "Close",
+                                                                      "dateIsUnavailable": [Function],
+                                                                      "enterKey": "Enter key",
+                                                                      "escape": "Escape key",
+                                                                      "focusStartDate": "Interact with the calendar and add the check-in date for your trip.",
+                                                                      "hideKeyboardShortcutsPanel": "Close the shortcuts panel",
+                                                                      "homeEnd": "Home and end keys",
+                                                                      "jumpToNextMonth": "Move forward to switch to the next month",
+                                                                      "jumpToPrevMonth": "Move backward to switch to the previous month",
+                                                                      "keyboardNavigationInstructions": "Press the down arrow key to interact with the calendar and
+                                                              select a date. Press the question mark key to get the keyboard shortcuts for changing dates.",
+                                                                      "keyboardShortcuts": "Keyboard Shortcuts",
+                                                                      "leftArrowRightArrow": "Right and left arrow keys",
+                                                                      "moveFocusByOneDay": "Move backward (left) and forward (right) by one day",
+                                                                      "moveFocusByOneMonth": "Switch months",
+                                                                      "moveFocusByOneWeek": "Move backward (up) and forward (down) by one week",
+                                                                      "moveFocustoStartAndEndOfWeek": "Go to the first or last day of a week",
+                                                                      "openThisPanel": "Open this panel",
+                                                                      "pageUpPageDown": "page up and page down keys",
+                                                                      "questionMark": "Question mark",
+                                                                      "returnFocusToInput": "Return to the date input field",
+                                                                      "selectFocusedDate": "Select the date in focus",
+                                                                      "showKeyboardShortcutsPanel": "Open the keyboard shortcuts panel",
+                                                                      "upArrowDownArrow": "up and down arrow keys",
+                                                                    }
+                                                  }
+                                                  readOnly={false}
+                                                  renderCalendarInfo={null}
+                                                  renderDay={null}
+                                                  renderMonth={null}
+                                                  reopenPickerOnClearDates={false}
+                                                  required={false}
+                                                  screenReaderInputMessage=""
+                                                  showClearDates={false}
+                                                  showDefaultInputIcon={false}
+                                                  startDate={"2017-08-21T16:42:44.004Z"}
+                                                  startDateId="startDate"
+                                                  startDatePlaceholderText="Start Date"
+                                                  withFullScreenPortal={false}
+                                                  withPortal={false}
+                                        />
+                                        <br />
+                                        <h5
+                                                  className="select-label"
+                                        >
+                                                  Interval:
+                                        </h5>
+                                        <Select
+                                                  addLabelText="Add \\"{label}\\"?"
+                                                  arrowRenderer={[Function]}
+                                                  autosize={true}
+                                                  backspaceRemoves={true}
+                                                  backspaceToRemoveMessage="Press backspace to remove {label}"
+                                                  className="select-field"
+                                                  clearAllText="Clear all"
+                                                  clearRenderer={[Function]}
+                                                  clearValueText="Clear value"
+                                                  clearable={true}
+                                                  deleteRemoves={true}
+                                                  delimiter=","
+                                                  disabled={false}
+                                                  escapeClearsValue={true}
+                                                  filterOptions={[Function]}
+                                                  ignoreAccents={true}
+                                                  ignoreCase={true}
+                                                  inputProps={Object {}}
+                                                  isLoading={false}
+                                                  joinValues={false}
+                                                  labelKey="label"
+                                                  matchPos="any"
+                                                  matchProp="any"
+                                                  menuBuffer={0}
+                                                  menuRenderer={[Function]}
+                                                  multi={false}
+                                                  name="form-field-name"
+                                                  noResultsText="No results found"
+                                                  onBlurResetsInput={true}
+                                                  onChange={[Function]}
+                                                  onCloseResetsInput={true}
+                                                  optionComponent={[Function]}
+                                                  options={
+                                                            Array [
+                                                                      Object {
+                                                                        "label": "Every Hour",
+                                                                        "value": "3600",
+                                                                      },
+                                                                      Object {
+                                                                        "label": "Every 2 Hour",
+                                                                        "value": "7200",
+                                                                      },
+                                                                      Object {
+                                                                        "label": "Every 6 Hour",
+                                                                        "value": "21600",
+                                                                      },
+                                                                      Object {
+                                                                        "label": "Every 12 Hour",
+                                                                        "value": "43200",
+                                                                      },
+                                                                      Object {
+                                                                        "label": "Every 24 Hour",
+                                                                        "value": "86400",
+                                                                      },
+                                                                      Object {
+                                                                        "label": "Every 7 days",
+                                                                        "value": "604800",
+                                                                      },
+                                                                      Object {
+                                                                        "label": "Every 30 days",
+                                                                        "value": "2592000",
+                                                                      },
+                                                                    ]
+                                                  }
+                                                  pageSize={5}
+                                                  placeholder="Select..."
+                                                  required={false}
+                                                  scrollMenuIntoView={true}
+                                                  searchable={true}
+                                                  simpleValue={false}
+                                                  tabSelectsValue={true}
+                                                  value="21600"
+                                                  valueComponent={[Function]}
+                                                  valueKey="value"
+                                        />
+                                        <br />
+                                        <button
+                                                  className="btn btn-default"
+                                        >
+                                                  VIEW RESULTS
+                                        </button>
+                              </form>
+                    </div>
+          </div>
+</div>,
+        "_debugID": 6,
+        "_renderedOutput": <div
+          className="past-form"
+>
+          <div
+                    className="date-pickers"
+          >
+                    <div
+                              className="date-wrapper"
+                    >
+                              <form
+                                        onSubmit={[Function]}
+                              >
+                                        <h4
+                                                  className="range-title"
+                                        >
+                                                  View weather by range / interval
+                                        </h4>
+                                        <h5
+                                                  className="select-label"
+                                        >
+                                                  Date range:
+                                        </h5>
+                                        <DateRangePicker
+                                                  anchorDirection="left"
+                                                  customArrowIcon={null}
+                                                  customCloseIcon={null}
+                                                  customInputIcon={null}
+                                                  daySize={39}
+                                                  disabled={false}
+                                                  displayFormat={[Function]}
+                                                  enableOutsideDays={false}
+                                                  endDate={"2017-08-22T16:42:44.006Z"}
+                                                  endDateId="endDate"
+                                                  endDatePlaceholderText="End Date"
+                                                  firstDayOfWeek={null}
+                                                  focusedInput={null}
+                                                  hideKeyboardShortcutsPanel={false}
+                                                  horizontalMargin={0}
+                                                  initialVisibleMonth={null}
+                                                  isDayBlocked={[Function]}
+                                                  isDayHighlighted={[Function]}
+                                                  isOutsideRange={[Function]}
+                                                  isRTL={false}
+                                                  keepOpenOnDateSelect={false}
+                                                  minimumNights={1}
+                                                  monthFormat="MMMM YYYY"
+                                                  navNext={null}
+                                                  navPrev={null}
+                                                  numberOfMonths={1}
+                                                  onClose={[Function]}
+                                                  onDatesChange={[Function]}
+                                                  onFocusChange={[Function]}
+                                                  onNextMonthClick={[Function]}
+                                                  onPrevMonthClick={[Function]}
+                                                  orientation="horizontal"
+                                                  phrases={
+                                                            Object {
+                                                                      "chooseAvailableEndDate": [Function],
+                                                                      "chooseAvailableStartDate": [Function],
+                                                                      "clearDates": "Clear Dates",
+                                                                      "closeDatePicker": "Close",
+                                                                      "dateIsUnavailable": [Function],
+                                                                      "enterKey": "Enter key",
+                                                                      "escape": "Escape key",
+                                                                      "focusStartDate": "Interact with the calendar and add the check-in date for your trip.",
+                                                                      "hideKeyboardShortcutsPanel": "Close the shortcuts panel",
+                                                                      "homeEnd": "Home and end keys",
+                                                                      "jumpToNextMonth": "Move forward to switch to the next month",
+                                                                      "jumpToPrevMonth": "Move backward to switch to the previous month",
+                                                                      "keyboardNavigationInstructions": "Press the down arrow key to interact with the calendar and
+                                                              select a date. Press the question mark key to get the keyboard shortcuts for changing dates.",
+                                                                      "keyboardShortcuts": "Keyboard Shortcuts",
+                                                                      "leftArrowRightArrow": "Right and left arrow keys",
+                                                                      "moveFocusByOneDay": "Move backward (left) and forward (right) by one day",
+                                                                      "moveFocusByOneMonth": "Switch months",
+                                                                      "moveFocusByOneWeek": "Move backward (up) and forward (down) by one week",
+                                                                      "moveFocustoStartAndEndOfWeek": "Go to the first or last day of a week",
+                                                                      "openThisPanel": "Open this panel",
+                                                                      "pageUpPageDown": "page up and page down keys",
+                                                                      "questionMark": "Question mark",
+                                                                      "returnFocusToInput": "Return to the date input field",
+                                                                      "selectFocusedDate": "Select the date in focus",
+                                                                      "showKeyboardShortcutsPanel": "Open the keyboard shortcuts panel",
+                                                                      "upArrowDownArrow": "up and down arrow keys",
+                                                                    }
+                                                  }
+                                                  readOnly={false}
+                                                  renderCalendarInfo={null}
+                                                  renderDay={null}
+                                                  renderMonth={null}
+                                                  reopenPickerOnClearDates={false}
+                                                  required={false}
+                                                  screenReaderInputMessage=""
+                                                  showClearDates={false}
+                                                  showDefaultInputIcon={false}
+                                                  startDate={"2017-08-21T16:42:44.004Z"}
+                                                  startDateId="startDate"
+                                                  startDatePlaceholderText="Start Date"
+                                                  withFullScreenPortal={false}
+                                                  withPortal={false}
+                                        />
+                                        <br />
+                                        <h5
+                                                  className="select-label"
+                                        >
+                                                  Interval:
+                                        </h5>
+                                        <Select
+                                                  addLabelText="Add \\"{label}\\"?"
+                                                  arrowRenderer={[Function]}
+                                                  autosize={true}
+                                                  backspaceRemoves={true}
+                                                  backspaceToRemoveMessage="Press backspace to remove {label}"
+                                                  className="select-field"
+                                                  clearAllText="Clear all"
+                                                  clearRenderer={[Function]}
+                                                  clearValueText="Clear value"
+                                                  clearable={true}
+                                                  deleteRemoves={true}
+                                                  delimiter=","
+                                                  disabled={false}
+                                                  escapeClearsValue={true}
+                                                  filterOptions={[Function]}
+                                                  ignoreAccents={true}
+                                                  ignoreCase={true}
+                                                  inputProps={Object {}}
+                                                  isLoading={false}
+                                                  joinValues={false}
+                                                  labelKey="label"
+                                                  matchPos="any"
+                                                  matchProp="any"
+                                                  menuBuffer={0}
+                                                  menuRenderer={[Function]}
+                                                  multi={false}
+                                                  name="form-field-name"
+                                                  noResultsText="No results found"
+                                                  onBlurResetsInput={true}
+                                                  onChange={[Function]}
+                                                  onCloseResetsInput={true}
+                                                  optionComponent={[Function]}
+                                                  options={
+                                                            Array [
+                                                                      Object {
+                                                                        "label": "Every Hour",
+                                                                        "value": "3600",
+                                                                      },
+                                                                      Object {
+                                                                        "label": "Every 2 Hour",
+                                                                        "value": "7200",
+                                                                      },
+                                                                      Object {
+                                                                        "label": "Every 6 Hour",
+                                                                        "value": "21600",
+                                                                      },
+                                                                      Object {
+                                                                        "label": "Every 12 Hour",
+                                                                        "value": "43200",
+                                                                      },
+                                                                      Object {
+                                                                        "label": "Every 24 Hour",
+                                                                        "value": "86400",
+                                                                      },
+                                                                      Object {
+                                                                        "label": "Every 7 days",
+                                                                        "value": "604800",
+                                                                      },
+                                                                      Object {
+                                                                        "label": "Every 30 days",
+                                                                        "value": "2592000",
+                                                                      },
+                                                                    ]
+                                                  }
+                                                  pageSize={5}
+                                                  placeholder="Select..."
+                                                  required={false}
+                                                  scrollMenuIntoView={true}
+                                                  searchable={true}
+                                                  simpleValue={false}
+                                                  tabSelectsValue={true}
+                                                  value="21600"
+                                                  valueComponent={[Function]}
+                                                  valueKey="value"
+                                        />
+                                        <br />
+                                        <button
+                                                  className="btn btn-default"
+                                        >
+                                                  VIEW RESULTS
+                                        </button>
+                              </form>
+                    </div>
+          </div>
+</div>,
+      },
+      "_renderedNodeType": 0,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <PastWeather />,
+}
+`;
+
+exports[`should rener the UI component 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <div
+    className="ui-container"
+>
+    <img
+        alt="Logo"
+        className="logo"
+        src="logo.png"
+    />
+    <CurrentWeather
+        getCurrentWeather={undefined}
+    />
+    <PastWeather
+        setRangeInterval={undefined}
+        showAlert={undefined}
+    />
+</div>,
+  "nodes": Array [
+    <div
+      className="ui-container"
+>
+      <img
+            alt="Logo"
+            className="logo"
+            src="logo.png"
+      />
+      <CurrentWeather
+            getCurrentWeather={undefined}
+      />
+      <PastWeather
+            setRangeInterval={undefined}
+            showAlert={undefined}
+      />
+</div>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 0,
+      "_context": Object {},
+      "_currentElement": <UI />,
+      "_debugID": 1,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": UI {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {},
+        "refs": Object {},
+        "state": Object {
+          "input": "",
+        },
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 1,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <div
+          className="ui-container"
+>
+          <img
+                    alt="Logo"
+                    className="logo"
+                    src="logo.png"
+          />
+          <CurrentWeather
+                    getCurrentWeather={undefined}
+          />
+          <PastWeather
+                    setRangeInterval={undefined}
+                    showAlert={undefined}
+          />
+</div>,
+        "_debugID": 2,
+        "_renderedOutput": <div
+          className="ui-container"
+>
+          <img
+                    alt="Logo"
+                    className="logo"
+                    src="logo.png"
+          />
+          <CurrentWeather
+                    getCurrentWeather={undefined}
+          />
+          <PastWeather
+                    setRangeInterval={undefined}
+                    showAlert={undefined}
+          />
+</div>,
+      },
+      "_renderedNodeType": 0,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <UI />,
+}
+`;

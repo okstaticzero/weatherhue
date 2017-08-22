@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import * as api from "./api/api.js";
-import {percentageToHsl } from "./utils/weatherUtils.js";
+import {temperatureToHsl } from "./utils/weatherUtils.js";
 import { WELCOME, CURRENT, RANGE } from "./constants.js";
 import UI from "./ui/";
 import Display from "./display";
@@ -94,7 +94,7 @@ class WeatherApp extends Component {
   };
 
   setTemp = temp => {
-    const color = percentageToHsl(temp, 225, 0); //255 blue, to 0 red
+    const color = temperatureToHsl(temp);
     this.setState({ temp: temp, bgColor: color });
   };
 

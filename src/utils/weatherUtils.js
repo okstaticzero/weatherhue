@@ -5,7 +5,7 @@ export const getIntervalArray = (start, end, int)=>{
    let result = start
    while (result < end) {  
       result += int
-      //console.log(result)
+      console.log(result)
       if(result > end){
         //if we've gone past the end date, set to the end date
         arr.push(end)
@@ -17,16 +17,18 @@ export const getIntervalArray = (start, end, int)=>{
 }
 
 
-const convertTemp =(value)=>{ //pass in temp
+const tempToPercent =(value)=>{ //pass in temp
     const bottom_value = -10; //minimum temperature
     const top_value = 100 // maximum temperature
-
     let range = top_value - bottom_value
     return (value - bottom_value) / range
 }
 
-export function percentageToHsl(temp, hue0, hue1) {
-    let percentage = convertTemp(temp)
+export function temperatureToHsl(temp) {
+    let percentage = tempToPercent(temp)
+     //255 blue, to 0 red
+    const hue0 = 255
+    const hue1 = 0
     //dont allow outside percentages
     if(percentage < 0){
         percentage = 0
