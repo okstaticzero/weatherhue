@@ -17,10 +17,11 @@ class UI extends Component {
       <div className="ui-container">
           <img className="logo" src={logo} alt="Logo" />
           <CurrentWeather 
-            getGeoCode={this.props.getGeoCode}
+            getCurrentWeather={this.props.getCurrentWeather}
            />
           <PastWeather
             setRangeInterval={this.props.setRangeInterval}
+            showAlert={this.props.showAlert}
           />
       </div>  
 

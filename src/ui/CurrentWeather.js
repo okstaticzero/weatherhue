@@ -10,7 +10,7 @@ export class CurrentWeather extends Component {
   }
 
   onSubmit = (e) =>{
-    this.props.getGeoCode(this.state.input)  
+    this.props.getCurrentWeather(this.state.input)  
     e.preventDefault()
   }
   handleChange=(e) =>{

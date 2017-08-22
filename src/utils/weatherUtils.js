@@ -17,7 +17,13 @@ export const getIntervalArray = (start, end, int)=>{
 }
 
 
+const convertTemp =(value)=>{ //pass in temp
+    const bottom_value = -10; //minimum temperature
+    const top_value = 100 // maximum temperature
 
+    let range = top_value - bottom_value
+    return (value - bottom_value) / range
+}
 
 export function percentageToHsl(temp, hue0, hue1) {
     let percentage = convertTemp(temp)
@@ -31,13 +37,3 @@ export function percentageToHsl(temp, hue0, hue1) {
     var hue = (percentage * (hue1 - hue0)) + hue0; //convert per to a number between hue1 and hue2
     return 'hsl(' + hue + ', 100%, 45%)';
 }
-
-
-const convertTemp =(value)=>{ //pass in temp
-    const bottom_value = -10; //minimum temperature
-    const top_value = 100 // maximum temperature
-
-    let range = top_value - bottom_value
-    return (value - bottom_value) / range
-}
-

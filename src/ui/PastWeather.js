@@ -3,6 +3,7 @@ import { DateRangePicker} from 'react-dates';
 import { isInclusivelyBeforeDay } from 'react-dates'
 import Select from 'react-select';
 import moment from "moment"
+import { getIntervalArray } from "../utils/weatherUtils.js";
 import 'react-dates/lib/css/_datepicker.css';
 import 'react-select/dist/react-select.css';
 
@@ -16,10 +17,6 @@ class PastWeather extends Component {
     }
   }
 
-  componentWillUpdate(){
-    //console.log(this.state)
-  }
-
   onSumbmit = (e) =>{
     e.preventDefault()
     let start = this.state.startDate
@@ -31,13 +28,12 @@ class PastWeather extends Component {
     start = Number(start.format('X'))
     end = Number(end.format('X'))
     let int = Number(this.state.interval)
-    console.log("start: "+ start)
-    console.log("end: "+ end)
     if((end - start) < int){
-      alert("Interval is greater than date range. Please change range or interval")
+      this.props.showAlert("Interval is greater than date range. \n Please change range or interval")
        return
     }
-    this.props.setRangeInterval(start, end, int)
+    var interValArr = getIntervalArray(start, end, int)
+    this.props.setRangeInterval(interValArr)
   }
   selectChange = (val) =>{
     this.setState({interval: val.value})
@@ -64,7 +60,7 @@ class PastWeather extends Component {
             <h5 className="select-label">Date range:</h5>
               <DateRangePicker
                 numberOfMonths={1}
-                isOutsideRange={day => !isInclusivelyBeforeDay(day, moment())}
+                isOutsideRange={day => !isInclusivelyBeforeDay(day, moment())} //only allow present and past dates
                 startDate={this.state.startDate} // momentPropTypes.momentObj or null,
                 endDate={this.state.endDate} // momentPropTypes.momentObj or null,
                 onDatesChange={({ startDate, endDate }) => this.setState({ startDate, endDate })} // PropTypes.func.isRequired,

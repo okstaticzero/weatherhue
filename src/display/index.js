@@ -38,7 +38,6 @@ class UI extends Component {
     this.setState({
       timeWeather:obj
     })
-    console.log("SETTEMP: "+ obj.temperature)
     this.props.setTemp(Math.round(obj.temperature))
   }
 

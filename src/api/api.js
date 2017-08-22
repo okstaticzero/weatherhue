@@ -33,7 +33,7 @@ export const reverseGeoCode = (lat, lng) => {
     });
 };
 
-export const fetchArrayOfWeather = (arr, lat, lng) => {
+export const createWeatherPromises = (arr, lat, lng) => {
   //array of unix timecodes
   const position = { latitude: lat, longitude: lng };
   //create an array of promises
@@ -45,13 +45,19 @@ export const fetchArrayOfWeather = (arr, lat, lng) => {
           resolve(res);
         })
         .catch(function(error) {
-          console.log("Error in Promise.all");
+          reject('Error loading weather range')
           return error;
         });
     });
   });
-
-  return promiseArr;
+  //return Promis.all
+  return Promise.all(promiseArr)
+    .then(response => { //all promises loaded
+      return response
+    })
+    .catch(function(err) {
+      return err
+  });
 };
 
 export const fetchCurrentWeather = (lat, lng) => {

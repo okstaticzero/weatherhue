@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import * as api from "./api/api.js";
-import { getIntervalArray, percentageToHsl } from "./utils/weatherUtils.js";
+import {percentageToHsl } from "./utils/weatherUtils.js";
 import { WELCOME, CURRENT, RANGE } from "./constants.js";
 import UI from "./ui/";
 import Display from "./display";
@@ -11,12 +11,8 @@ class WeatherApp extends Component {
     super(props);
     this.state = {
       weatherResults: {},
-      address: "",
       isLoading: false,
-      coords: {
-        lat: "",
-        lng: ""
-      },
+      coords: {lat: "",lng: ""},
       timeArr: [],
       temp: "70",
       bgColor: "#666",
@@ -32,100 +28,69 @@ class WeatherApp extends Component {
     }
   }
 
-  // get coords and address from google api
-  getGeoCode = inputText => {
-    this.setState({ isLoading: true });
-    this.setState({ displayType: CURRENT });
-    const _this = this;
-    api
-      .fetchGeoCode(inputText)
-      .then(results => {
-        const { lat, lng } = results.geometry.location;
-        this.setState({
-          coords: { lat: lat, lng: lng },
-          address: results.formatted_address
-        });
-        return api.fetchCurrentWeather(lat, lng); //fetch weather based on those coords
-      })
-      .then(results => {
-        this.setState({ weatherResults: results, isLoading: false });
-      })
-      .catch(function(error) {
-        _this.showNetworkError()
-        return error;
-      });
-  };
-  //get coords from html5 geo location
-  findCurrentPosition = () => {
+  // get cur weather - top input
+  getCurrentWeather = async (inputText) => {
     this.setState({ isLoading: true, displayType: CURRENT });
-    const _this = this;
-    api.getCurrentPosition()
-      .then(results => {
-        const { latitude, longitude } = results.coords;
-        this.setState({ coords: { lat: latitude, lng: longitude } });
-        return api.fetchCurrentWeather(latitude, longitude); //fetch weather based on those coords
-      })
-      .then(results => {
-        this.setState({ weatherResults: results });
-        return api.reverseGeoCode(this.state.coords.lat, this.state.coords.lng); //reverseGeoCode to get Address
-      })
-      .then(results => {
-        this.setState({ address: results.formatted_address, isLoading: false });
-      })
-      .catch(function(error) {
-        _this.setState({ isLoading: false, displayType: WELCOME });
-        if (error !== "geoError") {//fail silently if auto geo error
-          _this.showNetworkError()
-        }
-        return error;
+    try {
+      let geoResults = await api.fetchGeoCode(inputText)
+      const { lat, lng } = geoResults.geometry.location;
+      let weathData = await  api.fetchCurrentWeather(lat, lng)
+      this.setState({ weatherResults: weathData, 
+                      isLoading: false,
+                      coords: { lat: lat, lng: lng },
+                      address: geoResults.formatted_address
       });
+       
+    }catch(error) {
+      this.showAlert("Sorry! \n Problem retreiveing results. \n Please try again later");
+    }
   };
-  //called from Range submit
-  setRangeInterval = (start, end, init) => {
+  //get coords from html5 geo location // triggered on load
+  findCurrentPosition = async () => {
+    this.setState({ isLoading: true, displayType: CURRENT });
+    try {
+      let coordinates = await api.getCurrentPosition(); //get coords
+      const { latitude, longitude } = coordinates.coords;
+      let weathData = await api.fetchCurrentWeather(latitude, longitude); //fetch weather based on those coords
+      let address = await api.reverseGeoCode(latitude, longitude); //get address
+      this.setState({ weatherResults: weathData,
+                      coords: { lat: latitude, lng: longitude }, 
+                      address: address.formatted_address, 
+                      isLoading: false
+                  })
+    } catch (error) {
+      this.setState({ isLoading: false, displayType: WELCOME });
+      if (error !== "geoError") {//fail silently if auto geo error
+        this.showAlert("Sorry! \n Problem retreiveing results. \n Please try again later");
+      }
+    }
+  };
+  //called from Range submit - lower inputs
+  setRangeInterval = (intervalArr) => {
     if (!this.state.address) {
-      this.setState({
-        modalOpen: true,
-        alertText: "Please load a location first"
-      });
+      this.showAlert("Please load a location first");
       return;
     }
-    this.setState({ isLoading: true });
-    const arr = getIntervalArray(start, end, init); //returns array of unix timecodes
-    //
-    if (arr.length > 50) {
-      this.setState({
-        isLoading: false,
-        modalOpen: true,
-        alertText:"There is currently a limit of 50 intervals. Please select a new Date Range or interval"
-      });
+    if (intervalArr.length > 50) {
+      this.showAlert("There is currently a limit of 50 intervals. Please select a new date range or interval");
       return;
     }
-    this.getArrayOfWeather(arr);
+    this.fetchWeatherArray(intervalArr);
   };
 
-  getArrayOfWeather = arr => {
+  fetchWeatherArray = async (intervalArr) => {
+    this.setState({ isLoading: true });
     const { lat, lng } = this.state.coords;
-    const promiseArr = api.fetchArrayOfWeather(arr, lat, lng); //create array of Promises
-    //
-    Promise.all(promiseArr)
-      .then(response => {
-        //all promises loaded
-        const trimRes = response.map(item => {
-          return item.currently;
-        });
-        this.setState({
-          timeArr: trimRes,
-          isLoading: false,
-          displayType: RANGE
-        });
-      })
-      .catch(function(err) {
-        this.setState({
-          isLoading: false,
-          modalOpen: true,
-          alertText: "Error loading wether data"
-        });
-      });
+    try {
+      const results = await api.createWeatherPromises(intervalArr, lat, lng); //create array of Promises
+      const filterResults = results.map(item => item.currently);
+      this.setState({
+            timeArr: filterResults,
+            isLoading: false,
+            displayType: RANGE })
+    } catch (error) {
+      this.showAlert("Error retreiving data for weather Range");
+    }
   };
 
   setTemp = temp => {
@@ -133,16 +98,17 @@ class WeatherApp extends Component {
     this.setState({ temp: temp, bgColor: color });
   };
 
-  closModal = () => {
+  closeModal = () => {
     this.setState({ modalOpen: false });
   };
 
-  showNetworkError=()=>{
+  showAlert = msg => {
     this.setState({
-            modalOpen: true,
-            alertText: "Sorry! \n Problem retreiveing results. \n Please try again later"
-          });
-  }
+      modalOpen: true,
+      isLoading: false,
+      alertText: msg
+    });
+  };
 
   render() {
     const bgStyle = {
@@ -151,8 +117,9 @@ class WeatherApp extends Component {
     return (
       <div className="container-fluid" style={bgStyle}>
         <UI
-          getGeoCode={this.getGeoCode}
+          getCurrentWeather={this.getCurrentWeather}
           setRangeInterval={this.setRangeInterval}
+          showAlert={this.showAlert}
         />
         <Display
           weatherData={this.state.weatherResults}
@@ -170,7 +137,7 @@ class WeatherApp extends Component {
         </div>
         <Modal
           msg={this.state.alertText}
-          onClose={this.closModal}
+          onClose={this.closeModal}
           show={this.state.modalOpen}
         />
       </div>
