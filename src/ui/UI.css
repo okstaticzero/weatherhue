@@ -45,6 +45,11 @@
   font-size:19px;
   margin-bottom: 0;
 }
+.current-title{
+  margin-top: 0;
+  font-size:19px;
+  margin-bottom: 10px;
+}
 .date-pickers{
   text-align: left;
   

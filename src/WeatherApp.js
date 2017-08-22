@@ -68,7 +68,7 @@ class WeatherApp extends Component {
   //called from Range submit - lower inputs
   setRangeInterval = (intervalArr) => {
     if (!this.state.address) {
-      this.showAlert("Please load a location first");
+      this.showAlert("First, load a weather for a specific location.");
       return;
     }
     if (intervalArr.length > 50) {

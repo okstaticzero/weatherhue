@@ -19,6 +19,7 @@ export class CurrentWeather extends Component {
   render() {
     return (
       <div className="current-form">
+        <h4 className="current-title">View current weather</h4>
         <form className="form-inline" onSubmit={this.onSubmit}>
           <div className="form-group">
             <input type="text" className="form-control" 
