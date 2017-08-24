@@ -15,8 +15,3 @@ it('should rener the CurrentWeather component', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
-
-it('should rener the PastWeather component', () => {
-  const wrapper = shallow(<PastWeather />);
-  expect(wrapper).toMatchSnapshot();
-});

@@ -35,7 +35,8 @@ class WeatherApp extends Component {
       let geoResults = await api.fetchGeoCode(inputText)
       const { lat, lng } = geoResults.geometry.location;
       let weathData = await  api.fetchCurrentWeather(lat, lng)
-      this.setState({ weatherResults: weathData, 
+      
+      this.setState({ weatherResults: weathData,
                       isLoading: false,
                       coords: { lat: lat, lng: lng },
                       address: geoResults.formatted_address
@@ -52,6 +53,7 @@ class WeatherApp extends Component {
       let coordinates = await api.getCurrentPosition(); //get coords
       const { latitude, longitude } = coordinates.coords;
       let weathData = await api.fetchCurrentWeather(latitude, longitude); //fetch weather based on those coords
+
       let address = await api.reverseGeoCode(latitude, longitude); //get address
       this.setState({ weatherResults: weathData,
                       coords: { lat: latitude, lng: longitude }, 
@@ -83,7 +85,8 @@ class WeatherApp extends Component {
     const { lat, lng } = this.state.coords;
     try {
       const results = await api.createWeatherPromises(intervalArr, lat, lng); //create array of Promises
-      const filterResults = results.map(item => item.currently);
+      const filterResults = results.map(item => item);
+      console.log(filterResults)
       this.setState({
             timeArr: filterResults,
             isLoading: false,
@@ -131,7 +134,7 @@ class WeatherApp extends Component {
         />
 
         <div className="footer col-md-12">
-          <a href="https://darksky.net/poweredby" target="_blank">
+          <a href="https://darksky.net/poweredby" target="_blank" rel="noopener noreferrer">
             Powered by Dark Sky
           </a>
         </div>

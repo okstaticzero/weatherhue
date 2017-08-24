@@ -66,8 +66,11 @@ export const fetchCurrentWeather = (lat, lng) => {
       latitude: lat,
       longitude: lng
     };
-    return DarkSkyApi.loadCurrent(position)
+    console.log("here")
+    return DarkSkyApi.loadItAll(null, position)
+    //return DarkSkyApi.loadCurrent(position)
       .then(result => {
+        console.log(result)
         reslove(result);
       })
       .catch(function(error) {

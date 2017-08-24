@@ -1,8 +1,5 @@
 This project requires create-react-app to be installed: [Create React App](https://github.com/facebookincubator/create-react-app).
 
-### demo:
-http://weather.zerostatic.com/
-
 ### about:
 React app using the DarkSky api to display weather data
 
@@ -20,7 +17,7 @@ React app using the DarkSky api to display weather data
 ## commands:
 
 ```
-npm install -g create-react-app  //install create-react-app
+npm install -g create-react-app  //global install create-react-app
 npm install //install dependencies
 npm start //launch project and view in browser
 npm test // test
